@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32537F902438FB7D00872BA1 /* NewTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32537F8F2438FB7D00872BA1 /* NewTaskTableViewController.swift */; };
 		32C3A2C22437AED600FD8547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3A2C12437AED600FD8547 /* AppDelegate.swift */; };
 		32C3A2C42437AED600FD8547 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3A2C32437AED600FD8547 /* SceneDelegate.swift */; };
 		32C3A2C92437AED600FD8547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C3A2C72437AED600FD8547 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32537F8F2438FB7D00872BA1 /* NewTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskTableViewController.swift; sourceTree = "<group>"; };
 		32C3A2BE2437AED600FD8547 /* TodoEmojiList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoEmojiList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C3A2C12437AED600FD8547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32C3A2C32437AED600FD8547 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				32C3A2C12437AED600FD8547 /* AppDelegate.swift */,
 				32C3A2C32437AED600FD8547 /* SceneDelegate.swift */,
 				32C3A2D52437B08200FD8547 /* EmojiTableViewController.swift */,
+				32537F8F2438FB7D00872BA1 /* NewTaskTableViewController.swift */,
 				32C3A2D92437C7CC00FD8547 /* EmojiModel.swift */,
 				32C3A2D72437B89800FD8547 /* EmojiTableViewCell.swift */,
 				32C3A2C72437AED600FD8547 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32537F902438FB7D00872BA1 /* NewTaskTableViewController.swift in Sources */,
 				32C3A2C22437AED600FD8547 /* AppDelegate.swift in Sources */,
 				32C3A2D62437B08200FD8547 /* EmojiTableViewController.swift in Sources */,
 				32C3A2D82437B89800FD8547 /* EmojiTableViewCell.swift in Sources */,
