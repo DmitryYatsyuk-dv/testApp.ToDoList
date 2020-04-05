@@ -17,34 +17,34 @@
                         <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emojiCell" rowHeight="68" id="WTd-jN-d8p" customClass="EmojiTableViewCell" customModule="TodoEmojiList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emojiCell" rowHeight="80" id="WTd-jN-d8p" customClass="EmojiTableViewCell" customModule="TodoEmojiList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTd-jN-d8p" id="y9s-4Y-mxA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PZA-nQ-CAK">
-                                            <rect key="frame" x="16" y="8" width="382" height="52"/>
+                                            <rect key="frame" x="16" y="8" width="382" height="64"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="🍋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-gN-awD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="52"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="64"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-gX-LR4">
-                                                    <rect key="frame" x="37" y="0.0" width="345" height="52"/>
+                                                    <rect key="frame" x="38" y="0.0" width="344" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-sC-62f">
-                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="26"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="344" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't forget to buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-eL-etE">
-                                                            <rect key="frame" x="0.0" y="26" width="345" height="26"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="32" width="344" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -64,6 +64,7 @@
                                     <outlet property="descriptionLabel" destination="OP4-eL-etE" id="fac-Gh-xWU"/>
                                     <outlet property="emojiLabel" destination="tcE-gN-awD" id="Z4p-3S-SyX"/>
                                     <outlet property="nameLabel" destination="bsn-sC-62f" id="lT6-dH-XKa"/>
+                                    <segue destination="SMw-JS-u7B" kind="show" identifier="editCell" id="7k2-rK-guZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,7 +105,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQu-sq-Y7l">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="textChanged:" destination="mXc-Tr-9K5" eventType="editingChanged" id="jpM-po-ZB8"/>
@@ -132,7 +133,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-RK-Thp">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="textChanged:" destination="mXc-Tr-9K5" eventType="editingChanged" id="dB5-yq-5dt"/>
@@ -160,7 +161,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4X3-d6-qz2">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="textChanged:" destination="mXc-Tr-9K5" eventType="editingChanged" id="Weu-tz-BLl"/>
@@ -184,8 +185,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="D3Q-CE-hFr">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="phb-Jw-nmn"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="aK9-9Z-91x"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="phb-Jw-nmn">
+                            <connections>
+                                <segue destination="E7S-En-g1I" kind="unwind" unwindAction="unwindSegueWithSegue:" id="12i-v1-iPB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="aK9-9Z-91x">
+                            <connections>
+                                <segue destination="E7S-En-g1I" kind="unwind" identifier="saveSegue" unwindAction="unwindSegueWithSegue:" id="naG-lJ-tsB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTF" destination="4X3-d6-qz2" id="RYy-tc-xtE"/>
@@ -195,6 +204,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH9-JD-AUi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="E7S-En-g1I" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3298.5507246376815" y="120.53571428571428"/>
         </scene>
@@ -236,4 +246,7 @@
             <point key="canvasLocation" x="2544.9275362318845" y="120.53571428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7k2-rK-guZ"/>
+    </inferredMetricsTieBreakers>
 </document>

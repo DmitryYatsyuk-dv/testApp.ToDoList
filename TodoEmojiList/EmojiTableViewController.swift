@@ -10,6 +10,7 @@ import UIKit
 
 class EmojiTableViewController: UITableViewController {
     
+    //MARK: Variables
     var objects = [
         EmojiModel(emoji: "🍐",
                    name: "Pear",
@@ -24,7 +25,7 @@ class EmojiTableViewController: UITableViewController {
                    description: "I need hug!",
                    isFavourite: false)
     ]
-    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +36,38 @@ class EmojiTableViewController: UITableViewController {
         self.title = "To Do Emoji"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
+    }
+    
+    //MARK: IBActions
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+        guard segue.identifier == "saveSegue" else { return }
+        let sourceVC = segue.source as! NewTaskTableViewController
+        let emoji = sourceVC.emoji
+        
+        // Logic actions with selected cells (edit existing task || save new task)
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            objects[selectedIndexPath.row] = emoji
+            tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+            
+        } else {
+            let newIndexPath = IndexPath(row: objects.count, section: 0)
+            objects.append(emoji)
+            tableView.insertRows(at: [newIndexPath], with: .fade)
+        }
+    }
+    
+    //MARK: Navigation
+    // Editing Cells
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editCell" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let emoji = objects[indexPath.row]
+        let navigationVC = segue.destination as! UINavigationController
+        let newTaskVC = navigationVC.topViewController as! NewTaskTableViewController
+        newTaskVC.emoji = emoji
+        newTaskVC.title = "Edit"
     }
     
     // MARK: - Table view data source
@@ -57,7 +90,8 @@ class EmojiTableViewController: UITableViewController {
         cell.setValuesForRow(object: object)
         return cell
     }
-    
+    // logic create checkmark
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
@@ -66,7 +100,8 @@ class EmojiTableViewController: UITableViewController {
         } else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
         }
-    }
+     }
+    */
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
